@@ -1,0 +1,663 @@
+/*=========================================
+PAGE 4
+page4.css (Part 1)
+=========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(180deg,#FFF7FB,#FFE9F3,#FFD9EA,#FFF7FB);
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    color:#444;
+
+    position:relative;
+
+}
+
+/* Floating Background */
+
+.hearts,
+.sparkles{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+/* Back Button */
+
+.top-bar{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 20px;
+
+    z-index:9999;
+
+}
+
+.back-btn,
+#musicBtn{
+
+    border:none;
+    outline:none;
+    cursor:pointer;
+
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    font-size:16px;
+    font-weight:600;
+
+    color:#000;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    border:1px solid black;
+
+    transition:.35s;
+
+}
+
+.back-btn:hover,
+#musicBtn:hover{
+
+    transform:translateY(-3px);
+
+    background:rgba(255,255,255,.28);
+
+}
+
+/* Main */
+
+.container{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:90px 18px;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+/* Book */
+
+.book{
+
+    width:100%;
+
+    max-width:430px;
+
+    background:rgba(255,255,255,.78);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 45px rgba(255,150,190,.30);
+
+}
+
+/* Cover */
+
+.book-cover{
+
+    padding:40px 28px;
+
+    text-align:center;
+
+}
+
+.book-cover h3{
+
+    color:#ff7dad;
+
+    font-size:24px;
+
+    margin-bottom:12px;
+
+}
+
+.book-cover h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:68px;
+
+    color:#ff5f9f;
+
+    margin-bottom:15px;
+
+}
+
+.book-cover p{
+
+    color:#777;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+}
+
+/* Open Button */
+
+#openBook{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#ff78af,#ff4f90);
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:0 15px 30px rgba(255,120,180,.35);
+
+}
+
+/* Letter */
+
+.letter-page{
+
+    display:none;
+
+    padding:35px 25px;
+
+    animation:fadeUp .8s ease;
+
+}
+
+.top{
+
+    text-align:center;
+
+    font-size:60px;
+
+    margin-bottom:18px;
+
+}
+
+.letter-page h2{
+
+    text-align:center;
+
+    color:#ff5f9f;
+
+    margin-bottom:25px;
+
+}
+
+/* Message Box */
+
+.message{
+
+    background:#fff;
+
+    border-radius:25px;
+
+    padding:22px;
+
+    line-height:2;
+
+    color:#555;
+
+    white-space:pre-wrap;
+
+    box-shadow:0 12px 25px rgba(255,150,190,.18);
+
+    min-height:220px;
+
+}
+
+/* Read Again */
+
+.again-btn{
+
+    display:none;
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#ff7cad,#ff4d8d);
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+/* Ending */
+
+.ending{
+
+    margin-top:35px;
+
+    text-align:center;
+
+    font-size:26px;
+
+    color:#ff5f9f;
+
+    font-family:'Great Vibes',cursive;
+
+}
+/*=========================================
+PAGE 4
+page4.css (Part 2)
+=========================================*/
+
+/* Show Letter */
+
+.showLetter{
+
+    display:block !important;
+
+}
+
+/* Floating Hearts */
+
+.hearts::before,
+.hearts::after{
+
+    content:"💖 💕 💗 💞 💝 💖 💕 💗";
+
+    position:absolute;
+
+    left:0;
+
+    width:100%;
+
+    font-size:24px;
+
+    opacity:.25;
+
+    animation:heartFall 20s linear infinite;
+
+}
+
+.hearts::after{
+
+    animation-delay:6s;
+
+    animation-duration:26s;
+
+    opacity:.18;
+
+}
+
+/* Sparkles */
+
+.sparkles::before,
+.sparkles::after{
+
+    content:"✨ ⭐ ✨ ⭐ ✨ ⭐ ✨";
+
+    position:absolute;
+
+    left:0;
+
+    width:100%;
+
+    font-size:18px;
+
+    opacity:.45;
+
+    animation:sparkleMove 12s linear infinite;
+
+}
+
+.sparkles::after{
+
+    animation-delay:4s;
+
+    animation-duration:18s;
+
+}
+
+/* Hover Effects */
+
+#openBook:hover{
+
+    transform:translateY(-4px);
+
+    transition:.35s;
+
+}
+
+.again-btn:hover{
+
+    transform:translateY(-4px);
+
+    transition:.35s;
+
+}
+
+.back-btn a:hover{
+
+    transform:translateY(-3px);
+
+    transition:.3s;
+
+}
+
+.music-btn button:hover{
+
+    transform:rotate(18deg) scale(1.08);
+
+    transition:.3s;
+
+}
+
+/* Book Animation */
+
+.book{
+
+    animation:bookEntry .9s ease;
+
+}
+
+.book-cover{
+
+    animation:fadeUp .8s ease;
+
+}
+
+/* Message */
+
+.message{
+
+    overflow-wrap:break-word;
+
+    word-break:break-word;
+
+    font-size:16px;
+
+}
+
+/* Animations */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes bookEntry{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes heartFall{
+
+    from{
+
+        transform:translateY(-120px);
+
+    }
+
+    to{
+
+        transform:translateY(120vh);
+
+    }
+
+}
+
+@keyframes sparkleMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-120px);
+
+    }
+
+}
+
+@keyframes glow{
+
+    0%{
+
+        box-shadow:0 0 0 rgba(255,120,180,0);
+
+    }
+
+    50%{
+
+        box-shadow:0 0 35px rgba(255,120,180,.35);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 rgba(255,120,180,0);
+
+    }
+
+}
+
+#openBook{
+
+    animation:glow 2.5s infinite;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .book{
+
+        max-width:100%;
+
+    }
+
+    .book-cover h1{
+
+        font-size:56px;
+
+    }
+
+    .top{
+
+        font-size:50px;
+
+    }
+
+    .message{
+
+        font-size:15px;
+
+        line-height:1.9;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    body{
+
+        padding:0;
+
+    }
+
+    .container{
+
+        padding:80px 15px;
+
+    }
+
+    .book{
+
+        border-radius:28px;
+
+    }
+
+    .book-cover{
+
+        padding:30px 20px;
+
+    }
+
+    .book-cover h1{
+
+        font-size:48px;
+
+    }
+
+    .book-cover h3{
+
+        font-size:20px;
+
+    }
+
+    #openBook{
+
+        font-size:16px;
+
+        padding:16px;
+
+    }
+
+    .letter-page{
+
+        padding:25px 18px;
+
+    }
+
+    .message{
+
+        font-size:14px;
+
+        line-height:1.8;
+
+        padding:18px;
+
+    }
+
+    .again-btn{
+
+        font-size:16px;
+
+        padding:15px;
+
+    }
+
+    .ending{
+
+        font-size:22px;
+
+    }
+
+}
+
+
+
+.message{
+    white-space:pre-wrap;
+    line-height:2;
+}
+
+/*==============================
+END OF PAGE 4 CSS
+==============================*/
