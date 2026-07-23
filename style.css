@@ -1,0 +1,1000 @@
+/*==================================
+Happy Birthday Sanober
+style.css (Part 1)
+==================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(180deg,#FFF8FC,#FCE7F3,#FFF8FC);
+    min-height:100vh;
+    overflow-x:hidden;
+    color:#444;
+    position:relative;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#f6a8c8;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#fff;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:70px 20px;
+    position:relative;
+}
+
+/* Card */
+
+.card{
+
+    width:100%;
+    max-width:420px;
+
+    background:rgba(255,255,255,.65);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.5);
+
+    border-radius:35px;
+
+    box-shadow:
+    0 20px 45px rgba(255,170,200,.25);
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    animation:cardShow 1.2s ease;
+}
+
+/* Heading */
+
+.small-title{
+
+    font-size:20px;
+
+    color:#d86b9c;
+
+    font-weight:600;
+
+    margin-bottom:12px;
+}
+
+.card h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:68px;
+
+    color:#ff5f9f;
+
+    margin-bottom:25px;
+
+    text-shadow:0 5px 15px rgba(255,120,180,.25);
+}
+
+/* Photo */
+
+.photo-box{
+
+    width:220px;
+
+    height:220px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    padding:7px;
+
+    background:linear-gradient(135deg,#ffd1e6,#ffc3d8,#ffffff);
+
+    box-shadow:
+    0 12px 35px rgba(255,120,180,.30);
+
+    animation:floatImage 4s ease-in-out infinite;
+}
+
+.photo-box img{
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:6px solid white;
+}
+
+/* Message */
+
+.message{
+
+    margin-top:28px;
+
+    line-height:1.9;
+
+    font-size:15px;
+
+    color:#555;
+}
+
+/* Buttons */
+
+.buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-top:35px;
+}
+
+.btn{
+
+    text-decoration:none;
+
+    padding:16px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    font-size:16px;
+}
+
+.pink{
+
+    background:#ff7eb3;
+
+    color:white;
+
+    box-shadow:
+    0 10px 25px rgba(255,126,179,.35);
+}
+
+.pink:hover{
+
+    transform:translateY(-5px);
+
+    background:#ff5a9a;
+}
+
+.white{
+
+    background:white;
+
+    color:#ff5f9f;
+
+    border:2px solid #ffd4e6;
+}
+
+.white:hover{
+
+    transform:translateY(-5px);
+
+    background:#fff1f7;
+}
+
+/* Scroll */
+
+.scroll{
+
+    position:absolute;
+
+    bottom:20px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    text-align:center;
+
+    animation:upDown 2s infinite;
+}
+
+.scroll span{
+
+    width:25px;
+
+    height:45px;
+
+    display:block;
+
+    border:2px solid #ff8dbd;
+
+    border-radius:30px;
+
+    margin:auto;
+
+    position:relative;
+}
+
+.scroll span::before{
+
+    content:"";
+
+    width:7px;
+
+    height:7px;
+
+    background:#ff8dbd;
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    top:8px;
+
+    border-radius:50%;
+
+    animation:wheel 1.5s infinite;
+}
+
+.scroll p{
+
+    margin-top:10px;
+
+    color:#cc6d98;
+
+    font-size:14px;
+}
+
+/* Hearts */
+
+.hearts{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    top:0;
+
+    left:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+}
+
+.hearts span{
+
+    position:absolute;
+
+    bottom:-40px;
+
+    color:#ff8dbd;
+
+    font-size:18px;
+
+    animation:heartFloat linear infinite;
+}
+
+.hearts span:nth-child(1){
+left:8%;
+animation-duration:8s;
+}
+
+.hearts span:nth-child(2){
+left:20%;
+animation-duration:12s;
+font-size:24px;
+}
+
+.hearts span:nth-child(3){
+left:35%;
+animation-duration:9s;
+}
+
+.hearts span:nth-child(4){
+left:52%;
+animation-duration:11s;
+font-size:22px;
+}
+
+.hearts span:nth-child(5){
+left:68%;
+animation-duration:7s;
+}
+
+.hearts span:nth-child(6){
+left:82%;
+animation-duration:10s;
+}
+
+.hearts span:nth-child(7){
+left:94%;
+animation-duration:9s;
+}
+
+/* Balloons */
+
+.balloons{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+    overflow:hidden;
+}
+
+.balloon{
+
+    width:70px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    bottom:-150px;
+
+    animation:balloonUp linear infinite;
+}
+
+.balloon::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:2px;
+
+    height:90px;
+
+    background:#bbb;
+
+    left:50%;
+
+    top:90px;
+}
+
+.b1{
+left:8%;
+background:#ff9cc5;
+animation-duration:15s;
+}
+
+.b2{
+left:32%;
+background:#ffd166;
+animation-duration:18s;
+}
+
+.b3{
+left:62%;
+background:#bde0fe;
+animation-duration:17s;
+}
+
+.b4{
+left:86%;
+background:#caffbf;
+animation-duration:20s;
+}
+/*==================================
+style.css (Part 2)
+==================================*/
+
+/* Sparkles */
+
+.sparkles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.sparkles::before,
+.sparkles::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-image:
+        radial-gradient(circle,#ffffff 1.5px,transparent 2px),
+        radial-gradient(circle,#ffd6e7 1px,transparent 2px),
+        radial-gradient(circle,#fff2a8 1px,transparent 2px);
+    background-size:120px 120px,180px 180px,240px 240px;
+    animation:twinkle 12s linear infinite;
+    opacity:.6;
+}
+
+.sparkles::after{
+    animation-duration:18s;
+    transform:rotate(180deg);
+    opacity:.35;
+}
+
+/*=========================
+Animations
+=========================*/
+
+@keyframes cardShow{
+
+    from{
+        opacity:0;
+        transform:translateY(40px) scale(.95);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+@keyframes floatImage{
+
+    0%,100%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+@keyframes balloonUp{
+
+    0%{
+        transform:translateY(0) translateX(0);
+    }
+
+    25%{
+        transform:translateY(-25vh) translateX(10px);
+    }
+
+    50%{
+        transform:translateY(-50vh) translateX(-10px);
+    }
+
+    75%{
+        transform:translateY(-75vh) translateX(8px);
+    }
+
+    100%{
+        transform:translateY(-130vh) translateX(-8px);
+    }
+}
+
+@keyframes heartFloat{
+
+    0%{
+        transform:translateY(0) scale(.8);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120vh) translateX(30px) scale(1.5);
+        opacity:0;
+    }
+}
+
+@keyframes wheel{
+
+    0%{
+        top:8px;
+        opacity:1;
+    }
+
+    100%{
+        top:24px;
+        opacity:0;
+    }
+}
+
+@keyframes upDown{
+
+    0%,100%{
+        transform:translateX(-50%) translateY(0);
+    }
+
+    50%{
+        transform:translateX(-50%) translateY(8px);
+    }
+}
+
+@keyframes twinkle{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    100%{
+        transform:translateY(-120px);
+    }
+}
+
+/*=========================
+Hover Effects
+=========================*/
+
+.card:hover{
+    transform:translateY(-5px);
+    transition:.4s;
+}
+
+.photo-box:hover{
+    transform:scale(1.04);
+    transition:.4s;
+}
+
+.btn:active{
+    transform:scale(.96);
+}
+
+/*=========================
+Responsive
+=========================*/
+
+@media (max-width:768px){
+
+    .hero{
+        padding:40px 18px 90px;
+    }
+
+    .card{
+        border-radius:28px;
+        padding:28px 20px;
+    }
+
+    .card h1{
+        font-size:58px;
+    }
+
+    .photo-box{
+        width:190px;
+        height:190px;
+    }
+
+    .message{
+        font-size:14px;
+        line-height:1.8;
+    }
+
+    .btn{
+        padding:15px;
+        font-size:15px;
+    }
+
+    .balloon{
+        width:58px;
+        height:78px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .small-title{
+        font-size:18px;
+    }
+
+    .card h1{
+        font-size:50px;
+    }
+
+    .photo-box{
+        width:165px;
+        height:165px;
+    }
+
+    .message{
+        font-size:13px;
+    }
+
+    .btn{
+        font-size:14px;
+        padding:14px;
+    }
+
+    .scroll p{
+        font-size:12px;
+    }
+
+}
+
+@media (min-width:1024px){
+
+    .card{
+        max-width:500px;
+        padding:45px;
+    }
+
+    .card h1{
+        font-size:82px;
+    }
+
+    .photo-box{
+        width:260px;
+        height:260px;
+    }
+
+    .message{
+        font-size:16px;
+    }
+
+    .btn{
+        font-size:17px;
+    }
+
+}
+
+/* End of style.css */
+
+.star{
+    position:fixed;
+    color:white;
+    pointer-events:none;
+    z-index:999;
+    animation:starAnimation linear forwards;
+}
+
+@keyframes starAnimation{
+
+    from{
+        opacity:0;
+        transform:translateY(0) scale(.5);
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    to{
+        opacity:0;
+        transform:translateY(-80px) scale(1.5);
+    }
+
+}
+
+/*=========================================
+APPEND CSS
+GIF GALLERY
+(Part 1)
+=========================================*/
+.gif-gallery{
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:80px auto;
+
+    padding:20px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.gif-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(14px);
+
+    -webkit-backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:0 12px 30px rgba(255,105,180,.18);
+
+    transition:.35s ease;
+
+}
+
+.gif-card:hover{
+
+    transform:translateY(-8px) scale(1.03);
+
+    box-shadow:0 18px 45px rgba(255,105,180,.30);
+
+}
+
+.gif-card img{
+
+    display:block;
+
+    width:100%;
+
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+    border-radius:22px;
+
+}
+
+/* Back To Top */
+
+#backToTop{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:25px;
+
+    width:58px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:24px;
+
+    color:#fff;
+
+    background:linear-gradient(135deg,#ff79b0,#ff4d94);
+
+    box-shadow:0 10px 30px rgba(255,105,180,.35);
+
+    display:none;
+
+    z-index:9999;
+
+    transition:.3s;
+
+}
+
+#backToTop:hover{
+
+    transform:scale(1.1);
+
+}
+
+/*=========================================
+APPEND CSS
+GIF GALLERY
+(Part 2)
+=========================================*/
+
+/* Floating Animation */
+
+.gif-card{
+
+    animation:floatGif 4s ease-in-out infinite;
+
+}
+
+.gif-card:nth-child(even){
+
+    animation-delay:.6s;
+
+}
+
+.gif-card:nth-child(3n){
+
+    animation-delay:1.2s;
+
+}
+
+/* Shine Effect */
+
+.gif-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+}
+
+.gif-card:hover::before{
+
+    left:160%;
+
+}
+
+/* Arrow Animation */
+
+#backToTop{
+
+    animation:bounceArrow 1.8s infinite;
+
+}
+
+#backToTop:hover{
+
+    box-shadow:0 15px 35px rgba(255,80,150,.45);
+
+}
+
+/* Responsive */
+
+@media (max-width:768px){
+
+    .gif-gallery{
+
+        gap:14px;
+
+        padding:16px;
+
+    }
+
+    .gif-card{
+
+        border-radius:18px;
+
+    }
+
+    .gif-card img{
+
+        border-radius:18px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .gif-gallery{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:10px;
+
+        padding:12px;
+
+        margin:60px auto;
+
+    }
+
+    .gif-card{
+
+        border-radius:15px;
+
+    }
+
+    .gif-card img{
+
+        border-radius:15px;
+
+    }
+
+    #backToTop{
+
+        width:52px;
+
+        height:52px;
+
+        font-size:20px;
+
+        right:15px;
+
+        bottom:20px;
+
+    }
+
+}
+
+/* Keyframes */
+
+@keyframes floatGif{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+@keyframes bounceArrow{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.html{
+    scroll-behavior: smooth;
+}
+
+/*=========================================
+END APPEND CSS
+=========================================*/
