@@ -1252,4 +1252,160 @@ FULLSCREEN LETTER 3 IMAGE
     }
 
 }
+/* =========================================
+   FINAL MOBILE FIX - PAGE 2
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* Page width fix */
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Top buttons */
+    .top-bar {
+        padding: 18px 20px;
+    }
+
+    .back-btn,
+    #musicBtn {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    /* Main container */
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 65px 22px 40px;
+        margin: 0 auto;
+    }
+
+    /* Heading */
+    .heading {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .heading h1 {
+        font-size: 43px;
+        line-height: 1.2;
+    }
+
+    .heading p {
+        font-size: 18px;
+        margin-top: 12px;
+    }
+
+    /* Gallery section */
+    .gallery-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 45px;
+    }
+
+    /* Gallery */
+    .gallery {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+
+    /* Every image wrapper */
+    .image,
+    .left-img,
+    .left-img2,
+    .right-img {
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto;
+    }
+
+    /* Images */
+    .image img,
+    .left-img img,
+    .left-img2 img,
+    .right-img img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+        border-radius: 15px;
+    }
+
+    /* Remove desktop scale on mobile */
+    .center-img {
+        transform: none;
+    }
+
+    .center-img:hover {
+        transform: none;
+    }
+
+    /* Letter card */
+    .letter-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 38px 22px;
+        border-radius: 28px;
+    }
+
+    .letter-card h2 {
+        font-size: 45px;
+        line-height: 1.2;
+    }
+
+    .letter-text {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .letter-text p {
+        margin-bottom: 24px;
+    }
+
+    /* Dots */
+    .dots {
+        margin: 32px 0;
+    }
+
+    /* Buttons */
+    .bottom-buttons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        margin-top: 30px;
+    }
+
+    .bottom-buttons a {
+        width: 100%;
+        padding: 18px 15px;
+        font-size: 17px;
+    }
+
+    /* Flowers inside card */
+    .flower {
+        font-size: 32px;
+    }
+
+    .flower-top {
+        top: 20px;
+        right: 18px;
+    }
+
+    .flower-bottom {
+        bottom: 18px;
+        left: 18px;
+    }
+    }
 /* End */
