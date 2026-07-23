@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Letter For You | Sanober</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="page2.css">
+
+</head>
+
+<body>
+
+<!-- Floating Petals -->
+<div class="petals"></div>
+
+<!-- Music Button -->
+
+<header class="top-bar">
+
+<button class="back-btn" onclick="window.location.href='home.html'">
+
+← Back
+
+</button>
+
+<button id="musicBtn">
+
+🎵 Music
+
+</button>
+
+</header>
+
+<!-- Main Container -->
+
+<section class="container">
+
+<!-- Heading -->
+
+<div class="heading">
+
+<h1>
+♡ A Letter For You ♡
+</h1>
+
+<p>
+✨ Happy Birthday Sanober ✨
+</p>
+
+</div>
+
+<!-- Image Gallery -->
+
+<div class="gallery-section">
+
+    <button class="arrow left">
+        ❮
+    </button>
+
+    <div class="gallery">
+
+        <div class="image left-img">
+
+            <img src="/letter1.jpg" alt="Letter1">
+
+        </div>
+
+        <div class="image center-img">
+
+            <img src="/letter2.png" alt="Letter2">
+
+            <div class="heart-badge">
+                ❤
+            </div>
+
+        </div>
+
+        <div class="image right-img">
+
+    <img 
+        src="/letter3.png"
+        alt="Letter3"
+      
+         </div>
+
+    </div>
+
+    <button class="arrow right">
+        ❯
+    </button>
+
+</div>
+<!-- Letter -->
+
+<div class="letter-card">
+
+<div class="flower flower-top">
+🌸
+</div>
+
+<div class="flower flower-bottom">
+🌺
+</div>
+
+<h2>
+
+Dear Sanober,
+
+</h2>
+
+<div class="divider">
+
+❤
+
+</div>
+
+<div class="letter-text">
+
+<p>
+
+On your special day,
+I wish your life always stays
+filled with happiness,
+peace, love and beautiful memories.
+
+</p>
+
+<p>
+
+May every smile you share
+return to you a thousand times.
+
+May every dream become reality,
+and may success always walk beside you.
+
+</p>
+
+<p>
+
+Thank you for being such
+a wonderful person.
+
+You deserve all the happiness
+this world has to offer.
+
+</p>
+
+<p>
+
+Happy Birthday once again!
+
+Stay blessed,
+Stay smiling,
+Stay amazing.
+
+💖
+
+</p>
+
+</div>
+
+</div>
+
+<!-- Slider Dots -->
+
+<div class="dots">
+
+<span class="active"></span>
+
+<span></span>
+
+<span></span>
+
+</div>
+
+<!-- Bottom Buttons -->
+
+<div class="bottom-buttons">
+
+<a href="home.html" class="previous">
+
+← Previous
+
+</a>
+
+<a href="page3.html" class="next">
+
+Next 🎁 →
+
+</a>
+
+</div>
+
+</section>
+
+<audio id="bgMusic" loop>
+    <source src="/Happy Birthday.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Fullscreen Letter Image Preview -->
+
+<div id="letterLightbox">
+
+    <button id="closeLetter">
+
+        ✕
+
+    </button>
+
+    <img
+        src="/letter1.jpg"
+        alt="Birthday Letter"
+    >
+    
+
+</div>
+
+
+<script>
+const letterImage =
+document.querySelector(".left-img img");
+
+const letterLightbox =
+document.getElementById("letterLightbox");
+
+const closeLetter =
+document.getElementById("closeLetter");
+
+letterImage.addEventListener("click", function(){
+
+    letterLightbox.classList.add("show");
+
+});
+
+closeLetter.addEventListener("click", function(){
+
+    letterLightbox.classList.remove("show");
+
+});
+
+letterLightbox.addEventListener("click", function(e){
+
+    if(e.target === letterLightbox){
+
+        letterLightbox.classList.remove("show");
+
+    }
+
+});
+
+
+</script>
+
+<!-- Fullscreen Letter Image Preview -->
+
+<div id="letterLightbox2">
+
+    <button id="closeLetter2">
+        ✕
+    </button>
+
+    <img
+        src="/letter2.png"
+        alt="Birthday Letter 2"
+    >
+
+</div>
+
+<script>
+
+const letterImage2 =
+document.querySelector(".center-img img");
+
+const letterLightbox2 =
+document.getElementById("letterLightbox2");
+
+const closeLetter2 =
+document.getElementById("closeLetter2");
+
+letterImage2.addEventListener("click", function(){
+
+    letterLightbox2.classList.add("show");
+
+});
+
+closeLetter2.addEventListener("click", function(){
+
+    letterLightbox2.classList.remove("show");
+
+});
+
+letterLightbox2.addEventListener("click", function(e){
+
+    if(e.target === letterLightbox2){
+
+        letterLightbox2.classList.remove("show");
+
+    }
+
+});
+
+</script>
+
+<!-- Fullscreen Letter 3 Image Preview -->
+
+<div id="letterLightbox3">
+
+    <button id="closeLetter3">
+        ✕
+    </button>
+
+    <img
+        src="/letter3.png"
+        alt="Birthday Letter 3"
+    >
+
+</div>
+
+<script>
+
+const letterImage3 =
+document.querySelector(".right-img img");
+
+const letterLightbox3 =
+document.getElementById("letterLightbox3");
+
+const closeLetter3 =
+document.getElementById("closeLetter3");
+
+letterImage3.addEventListener("click", function(){
+
+    letterLightbox3.classList.add("show");
+
+});
+
+closeLetter3.addEventListener("click", function(){
+
+    letterLightbox3.classList.remove("show");
+
+});
+
+letterLightbox3.addEventListener("click", function(e){
+
+    if(e.target === letterLightbox3){
+
+        letterLightbox3.classList.remove("show");
+
+    }
+
+});
+
+</script>
+
+<script src="music.js"></script>
+<script src="page2.js"></script>
+
+</body>
+
+</html>
